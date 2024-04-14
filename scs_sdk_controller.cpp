@@ -24,7 +24,6 @@
 #include "inputs.h"
 
 using namespace std;
-using namespace std::filesystem;
 
 #ifdef _WIN32
 HANDLE file_map_h = nullptr;
@@ -78,8 +77,8 @@ uint8_t* shm_buff_ptr = nullptr;
 
 void initialize_shared_memory(const unsigned int shm_size)
 {
-    const std::filesystem::path scs_shm_path = "/dev/shm/SCS/";
-    const std::string shm_file = scs_shm_path/"SCSControls";
+    const filesystem::path scs_shm_path = "/dev/shm/SCS/";
+    const string shm_file = scs_shm_path/"SCSControls";
 
     if (!exists(scs_shm_path)) {
         create_directory(scs_shm_path);
@@ -195,7 +194,7 @@ SCSAPI_RESULT scs_input_init(const scs_u32_t version, const scs_input_init_param
 
     try {
         initialize_shared_memory(shm_size);
-    } catch (const std::exception& e) {
+    } catch (const exception& e) {
         string init_error = string("Failed to init shm: ") + e.what();
         version_params->common.log(SCS_LOG_TYPE_error, init_error.c_str());
         return SCS_RESULT_generic_error;
