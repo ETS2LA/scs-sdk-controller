@@ -31,7 +31,7 @@ uint8_t* shm_buff_ptr = nullptr;
 
 void initialize_shared_memory(const unsigned int shm_size)
 {
-    const wchar_t* mem_name = L"Local\\SCSControls";
+    const char* mem_name = "Local\\SCSControls";
 
     file_map_h = CreateFileMapping(
         INVALID_HANDLE_VALUE,
