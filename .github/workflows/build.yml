@@ -62,5 +62,5 @@ jobs:
       with:
         name: artifact-${{ matrix.os }}-${{ matrix.c_compiler }}
         path: |
-          ${{ steps.strings.outputs.build-output-dir }}/*.dll
+          ${{ steps.strings.outputs.build-output-dir }}/Release/*.dll
           ${{ steps.strings.outputs.build-output-dir }}/*.so
