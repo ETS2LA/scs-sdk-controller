@@ -11,5 +11,5 @@ Available controls are listed in [`inputs.h`](inputs.h). More controls can be ad
 This project is using the CMake build system. You can build it like any other CMake project by running:
 ```bash
 cmake -B build
-build
+cmake --build build
 ```
