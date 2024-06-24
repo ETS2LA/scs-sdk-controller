@@ -41,4 +41,10 @@ const scs_input_device_input_t inputs[] = {
     {"accmode", "ETS2LA ACC Mode", SCS_VALUE_TYPE_bool},
     {"showmirrors", "ETS2LA Show Mirrors", SCS_VALUE_TYPE_bool},
     {"flasher4way", "ETS2LA Hazard Lights", SCS_VALUE_TYPE_bool},
+    {"activate", "ETS2LA Activate", SCS_VALUE_TYPE_bool},
+    {"assistact1", "ETS2LA Assist Act 1", SCS_VALUE_TYPE_bool},
+    {"assistact2", "ETS2LA Assist Act 2", SCS_VALUE_TYPE_bool},
+    {"assistact3", "ETS2LA Assist Act 3", SCS_VALUE_TYPE_bool},
+    {"assistact4", "ETS2LA Assist Act 4", SCS_VALUE_TYPE_bool},
+    {"assistact5", "ETS2LA Assist Act 5", SCS_VALUE_TYPE_bool},
 };
