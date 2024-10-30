@@ -35,8 +35,8 @@ class SCSController:
     light: bool = False
     hblight: bool = False
     lblinker: bool = False
-    lblinkerh: bool = False
     rblinker: bool = False
+    lblinkerh: bool = False
     rblinkerh: bool = False
     quickpark: bool = False
     drive: bool = False
