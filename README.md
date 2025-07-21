@@ -13,3 +13,6 @@ This project is using the CMake build system. You can build it like any other CM
 cmake -B build
 cmake --build build
 ```
+
+## Limitations
+- Currently having the plugin installed will cause the wipers to cycle to the max value, and then not return to their original position. The only way to reset them is to restart the game, or send the `wipers0` command via this SDK.

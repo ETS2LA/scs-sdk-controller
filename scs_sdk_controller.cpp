@@ -136,19 +136,20 @@ SCSAPI_RESULT input_event_callback(scs_input_event_t *const event_info, const sc
         input_context.shm_offset = 0;
     }
 
-    // Finish processing inputs for current frame
+    // If we have processed all inputs, return not found
     if (input_context.input_idx >= input_count) {
         return SCS_RESULT_not_found;
     }
 
     event_info->input_index = input_context.input_idx;
+    scs_input_device_input_t input = inputs[input_context.input_idx];
 
-    if (inputs[input_context.input_idx].value_type == SCS_VALUE_TYPE_float) {
+    if (input.value_type == SCS_VALUE_TYPE_float) {
         float read_val;
         memcpy(&read_val, shm_buff_ptr + input_context.shm_offset, sizeof(float));
         event_info->value_float.value = clamp(float(-1), read_val, float(1));
         input_context.shm_offset += sizeof(float);
-    } else if (inputs[input_context.input_idx].value_type == SCS_VALUE_TYPE_bool) {
+    } else if (input.value_type == SCS_VALUE_TYPE_bool) {
         bool read_val;
         memcpy(&read_val, shm_buff_ptr + input_context.shm_offset, sizeof(bool));
         event_info->value_bool.value = read_val;

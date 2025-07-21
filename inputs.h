@@ -76,8 +76,6 @@ const scs_input_device_input_t inputs[] = {
     {"clutch", "ETS2LA clutch", SCS_VALUE_TYPE_float},
     {"activate", "ETS2LA activate", SCS_VALUE_TYPE_bool},
     {"menu", "ETS2LA menu", SCS_VALUE_TYPE_bool},
-    {"engine", "ETS2LA engine", SCS_VALUE_TYPE_bool},
-    {"engineelect", "ETS2LA engineelect", SCS_VALUE_TYPE_bool},
     {"ignitionoff", "ETS2LA ignitionoff", SCS_VALUE_TYPE_bool},
     {"ignitionon", "ETS2LA ignitionon", SCS_VALUE_TYPE_bool},
     {"ignitionstrt", "ETS2LA ignitionstrt", SCS_VALUE_TYPE_bool},
