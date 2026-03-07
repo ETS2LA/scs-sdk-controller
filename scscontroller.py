@@ -328,7 +328,8 @@ class SCSController:
 
     def close(self):
         self._shm_buff.close()
-        self._shm_fd.close()
+        if platform.system() == "Linux":
+            self._shm_fd.close()
 
     def __enter__(self):
         return self
